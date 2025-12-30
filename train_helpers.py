@@ -27,13 +27,14 @@ def train_and_eval(model, name, epochs=10, batchsize=128, resize=False):
   trainer.fit(model, data) # Trainer should handle moving data to GPU during training
   end = time.perf_counter()
 
-  accuracies[name] = evaluate_model(model, data.val_dataloader())
-  training_times[name] = end - start
-  parameter_count[name] = count_parameters(model)
+  accuracy = evaluate_model(model, data.val_dataloader())
+  training_time = end - start
+  parameter_count = count_parameters(model)
   average_time_per_epoch = (end - start) / epochs # Calculate average time first
   print(f"Average time per epoch: {average_time_per_epoch:.4f} seconds") # Then format the result
   print(f"Accuracy: {accuracies[name]}")
   print(f"Parameter count: {parameter_count[name]}")
+  return accuracy, training_time, parameter_count
 
 def evaluate_model(model, data_loader):
     metric = d2l.Accumulator(2)
