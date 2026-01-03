@@ -4,10 +4,16 @@ from torch import nn
 from d2l import torch as d2l
 
 def train_and_eval(model, name, epochs=10, batchsize=128, resize=False):
-  if resize:
-    data = d2l.FashionMNIST(batch_size=batchsize, resize=(224, 224)) # Changed to d2l.data.FashionMNIST
-  else:
-    data = d2l.FashionMNIST(batch_size=batchsize) # Changed to d2l.data.FashionMNIST
+    # Determine the resize value based on input type
+    if isinstance(resize, tuple):
+        # If user provided a specific tuple like (64, 64)
+        data = d2l.FashionMNIST(batch_size=batchsize, resize=resize)
+    elif resize is True:
+        # If user just said True, use the default 224x224
+        data = d2l.FashionMNIST(batch_size=batchsize, resize=(224, 224))
+    else:
+        # If resize is False (or any other value), don't resize
+        data = d2l.FashionMNIST(batch_size=batchsize)
 
   # Explicitly move the model to GPU if available
   if torch.cuda.is_available():
