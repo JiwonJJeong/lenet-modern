@@ -1,7 +1,7 @@
 # lenet-modern
 MLPs to GoogLeNet and ResNet. 5 notebooks on deep CNN limitations, implementing model variants, and deep learning heuristics in historical CNN models.
 
-An extension of excersizes and learning from [Dive into Deep Learning](https://d2l.ai/) textbook.
+An extension of exercises and learning from [Dive into Deep Learning](https://d2l.ai/) textbook.
 
 # Achieved Learning Goals
 * **Deep Learning**: Trained and evaluated models across MLPs, CNNs, and DCNNs with PyTorch and D2L.
