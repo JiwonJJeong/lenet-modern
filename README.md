@@ -3,11 +3,6 @@ MLPs to GoogLeNet and ResNet. 5 notebooks on deep CNN limitations, implementing 
 
 An extension of exercises and learning from [Dive into Deep Learning](https://d2l.ai/) textbook.
 
-# Achieved Learning Goals
-* **Deep Learning**: Trained and evaluated models across MLPs, CNNs, and DCNNs with PyTorch and D2L.
-* **Modern Heuristics and Techniques**: Implemented, demonstrated, and explained rationale for many common deep learning techniques in model architectures.
-* **Literature Reimplementation**: Reproduced partial model variants from original papers across VGG, GoogLeNet, and ResNeXt.
-
 # Topics
 1. [Multilayer Perceptrons](mlp.ipynb)
     1. Data visualization
@@ -41,4 +36,9 @@ An extension of exercises and learning from [Dive into Deep Learning](https://d2
     4. Residual networks (ResNet)
     5. Multi-branched ResNet (ResNeXt)
     6. Groups and bottleneck ratio
+   
+# Achieved Learning Goals
+* **Deep Learning**: Trained and evaluated models across MLPs, CNNs, and DCNNs with PyTorch and D2L.
+* **Modern Heuristics and Techniques**: Implemented, demonstrated, and explained rationale for many common deep learning techniques in model architectures.
+* **Literature Reimplementation**: Reproduced partial model variants from original papers across VGG, GoogLeNet, and ResNeXt.
 
